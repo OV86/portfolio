@@ -1,0 +1,48 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+.heading {
+    margin-top: 60px;
+    text-transform: uppercase;
+}
+
+.introduction {
+    margin-top: 60px;
+}
+
+.col-xs-4 {
+    margin: 20px 40px 40px 0;
+}
+
+.col-lg-12 {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.card-text {
+    height: 80px;
+}
+
+.footer {
+    width: 100%;
+    margin: 20px;
+}
+
+.footer i {
+    font-size: 40px;
+}
