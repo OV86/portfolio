@@ -12,8 +12,8 @@ app.get("/", function(req, res) {
     res.sendFile('index.html', {"root": __dirname});
 });
 
-app.get("/budgety", function(req, res) {
-    res.sendFile('/budgety/index.html', {"root": __dirname});
+app.get("/budgety-app", function(req, res) {
+    res.sendFile('/budgety-app/index.html', {"root": __dirname});
 });
 
 app.get("/pig-game", function(req, res) {
