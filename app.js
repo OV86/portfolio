@@ -12,6 +12,13 @@ app.get("/", function(req, res) {
     res.sendFile('index.html', {"root": __dirname});
 });
 
+app.get("/budgety", function(req, res) {
+    res.sendFile('/budgety/index.html', {"root": __dirname});
+});
+
+app.get("/pig-game", function(req, res) {
+    res.sendFile('/pig-game/index.html', {"root": __dirname});
+});
 
 app.listen(app.get('port'), function() {
     console.log("Server started.");
