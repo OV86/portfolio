@@ -1,11 +1,17 @@
 const express = require("express");
 const app = express();
+const http = require("http");
 
 // set up body parser and a css files
 app.use(express.static(__dirname + '/'));
 
 // run either in production or dev
 app.set('port', (process.env.PORT || 5000));
+
+// ping app in every 10 minutes (600000)
+setInterval(function() {
+    http.get("https://olafvaher.herokuapp.com");
+}, 600000);
 
 // basic routes
 app.get("/", function(req, res) {
