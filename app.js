@@ -11,8 +11,7 @@ app.set('port', (process.env.PORT || 5000));
 // ping app in every 10 minutes (600000)
 setInterval(function() {
     http.get("http://olafvaher.herokuapp.com");
-    console.log("pinged");
-}, 6000);
+}, 600000);
 
 // basic routes
 app.get("/", function(req, res) {
