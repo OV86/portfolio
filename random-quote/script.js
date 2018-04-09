@@ -2,10 +2,23 @@ $(document).ready(function() {
 
     $.getJSON("https://ron-swanson-quotes.herokuapp.com/v2/quotes", function(data) {
         $(".quote").html(data);
-        let currentQuote = data.join(" ");
+
+        updateTwitterBtn();
+    });
+    
+    $("#getQuote").on("click", function() {
+        $.getJSON("https://ron-swanson-quotes.herokuapp.com/v2/quotes", function(data) {
+            $(".quote").html(data);
+
+            updateTwitterBtn();
+        });
+    });
+
+    // updates the twitter button with a new quote
+    const updateTwitterBtn = () => {
+        let currentQuote = $(".quote").text();
         let name = $(".blockquote-footer").text();
         let quoteResult = currentQuote + " - " + name;
-
         // Remove existing iframe
         $('.twitter-btn iframe').remove();
         // Generate new markup
@@ -16,11 +29,5 @@ $(document).ready(function() {
             .attr('data-text', quoteResult);
         $('.twitter-btn').html(tweetBtn);
         twttr.widgets.load();
-    });
-    
-    $("#getQuote").on("click", function() {
-        $.getJSON("https://ron-swanson-quotes.herokuapp.com/v2/quotes", function(data) {
-            $(".quote").html(data);
-        });
-    });
+    };
 });
