@@ -26,6 +26,10 @@ app.get("/pig-game", function(req, res) {
     res.sendFile('/pig-game/index.html', {"root": __dirname});
 });
 
+app.get("/random-quote", function(req, res) {
+    res.sendFile('/random-quote/index.html', {"root": __dirname});
+});
+
 app.listen(app.get('port'), function() {
     console.log("Server started.");
 });

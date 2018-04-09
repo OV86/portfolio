@@ -1,0 +1,33 @@
+html,
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    background-color: rgb(238, 236, 229)
+}
+
+.data {
+    margin-top: 100px;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.card {
+    margin-top: 100px;
+}
+
+.row {
+    width: 100%;
+}
+
+#getQuote {
+    margin-top: 20px;
+}
+
+.twitter-btn {
+    float: right;
+    margin-top: 20px;
+}
