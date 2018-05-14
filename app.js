@@ -13,7 +13,7 @@ setInterval(function () {
     https.get("https://olafvaher.herokuapp.com");
     https.get("https://gentle-anchorage-53988.herokuapp.com");
     https.get("https://quiet-waters-93112.herokuapp.com");
-}, 3000);
+}, 600000);
 
 // basic routes
 app.get("/", function (req, res) {
