@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const http = require("http");
+const https = require("https");
 
 // set up body parser and a css files
 app.use(express.static(__dirname + '/'));
@@ -10,10 +10,10 @@ app.set('port', (process.env.PORT || 5000));
 
 // ping app in every 10 minutes (600000)
 setInterval(function () {
-    http.get("http://olafvaher.herokuapp.com");
-    http.get("https://gentle-anchorage-53988.herokuapp.com");
-    http.get("https://quiet-waters-93112.herokuapp.com");
-}, 600000);
+    https.get("https://olafvaher.herokuapp.com");
+    https.get("https://gentle-anchorage-53988.herokuapp.com");
+    https.get("https://quiet-waters-93112.herokuapp.com");
+}, 3000);
 
 // basic routes
 app.get("/", function (req, res) {
