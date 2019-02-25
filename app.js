@@ -8,11 +8,6 @@ app.use(express.static(__dirname + '/'));
 // run either in production or dev
 app.set('port', (process.env.PORT || 5000));
 
-// ping app in every 10 minutes (600000)
-setInterval(function () {
-    https.get("https://olafvaher.herokuapp.com");
-}, 600000);
-
 // basic routes
 app.get("/", function (req, res) {
     res.sendFile('index.html', { "root": __dirname });
